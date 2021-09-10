@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <div id="app">
+            {{ message }}
+            <div>
+                <span v-bind:title="myTitle">
+                    Hover your mouse of me for a few seconds
+                    to see my dynamically bound title!
+                </span>
+            </div>
+
+            <div>
+                <span v-if="seen">Now you see me</span>
+                <span v-else>Now you see the difference</span>
+            </div>
+
+            <ol>
+                <li v-for="i in myItems">
+                    {{ i.text }}
+                </li>
+            </ol>
+
+            <button v-on:click="reverseMessage">Reverse Message</button>
+
+        </div>
+        
+        
+        <script src="main.js"></script>
+    </body>
+</html>
